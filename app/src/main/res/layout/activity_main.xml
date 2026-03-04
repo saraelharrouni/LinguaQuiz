@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apprentissage des Langues"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/directionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choisissez la direction :"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <RadioGroup
+        android:id="@+id/directionRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/directionLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/radioFrToEn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Français -> Anglais"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioEnToFr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anglais -> Français"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnStartSession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Démarrer la session"
+        app:layout_constraintTop_toBottomOf="@id/directionRadioGroup"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/btnManageWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gérer le dictionnaire"
+        app:layout_constraintTop_toBottomOf="@id/btnStartSession"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/statsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vos statistiques apparaîtront ici."
+        app:layout_constraintTop_toBottomOf="@id/btnManageWords"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
