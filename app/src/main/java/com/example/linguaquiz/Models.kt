@@ -13,5 +13,6 @@ data class Word(
 data class SessionStat(
     val sessionNumber: Int, // Le numéro de la session (1ère, 2ème...)
     val correctAnswers: Int, // Nombre de bonnes réponses
-    val totalWords: Int      // Nombre total de mots dans la session
+    val totalWords: Int,      // Nombre total de mots dans la session
+    val isAbandoned: Boolean
 )

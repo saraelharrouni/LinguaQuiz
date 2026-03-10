@@ -49,12 +49,17 @@ class MainActivity : AppCompatActivity() {
         } else {
             var affichageStats = "Historique de vos sessions :\n\n"
 
-            // On parcourt notre liste pour ajouter chaque ligne
+            // On parcourt notre liste
             for (stat in statsList) {
-                affichageStats += "Session ${stat.sessionNumber} : ${stat.correctAnswers} / ${stat.totalWords} correctes\n"
+                if (stat.isAbandoned) {
+                    // 🌟 L'affichage exact que tu voulais !
+                    affichageStats += "Session ${stat.sessionNumber} : Abandonnée\n"
+                } else {
+                    // L'affichage classique avec le score
+                    affichageStats += "Session ${stat.sessionNumber} : ${stat.correctAnswers} / ${stat.totalWords} correctes\n"
+                }
             }
 
-            // On affiche le résultat final dans le TextView
             statsTextView.text = affichageStats
         }
     }

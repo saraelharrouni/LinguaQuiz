@@ -83,3 +83,4 @@ object StorageManager {
         editor.apply()
     }
 }
+// Cette classe sert de carte d'identité pour nos sauvegardes

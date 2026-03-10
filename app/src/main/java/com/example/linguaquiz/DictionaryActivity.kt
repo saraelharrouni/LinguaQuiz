@@ -26,6 +26,12 @@ class DictionaryActivity : AppCompatActivity() {
         val editWordFr = findViewById<EditText>(R.id.editWordFr)
         val editWordEn = findViewById<EditText>(R.id.editWordEn)
         val btnAddWord = findViewById<Button>(R.id.btnAddWord)
+        val btnBack = findViewById<Button>(R.id.btnBack)
+
+        // On écoute le clic sur le bouton Retour
+        btnBack.setOnClickListener {
+            finish() // Cette commande ferme la page actuelle et te ramène au menu !
+        }
         val wordsRecyclerView = findViewById<RecyclerView>(R.id.wordsRecyclerView)
 
         // 2. Configuration du RecyclerView

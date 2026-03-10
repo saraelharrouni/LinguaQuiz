@@ -44,5 +44,12 @@
         android:text="Vérifier"
         app:layout_constraintTop_toBottomOf="@id/editAnswer"
         android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/btnQuitSession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quitter la session"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
