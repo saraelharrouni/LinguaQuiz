@@ -47,8 +47,12 @@
     <Button
         android:id="@+id/btnQuitSession"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Quitter la session"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/colorDanger"
+        app:cornerRadius="12dp"
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent" />
 

@@ -54,6 +54,7 @@
         android:layout_height="wrap_content"
         android:text="Démarrer la session"
         app:layout_constraintTop_toBottomOf="@id/directionRadioGroup"
+        app:cornerRadius="12dp"
         android:layout_marginTop="32dp"/>
 
     <Button
@@ -62,6 +63,7 @@
         android:layout_height="wrap_content"
         android:text="Gérer le dictionnaire"
         app:layout_constraintTop_toBottomOf="@id/btnStartSession"
+        app:cornerRadius="12dp"
         android:layout_marginTop="16dp"/>
 
     <TextView
