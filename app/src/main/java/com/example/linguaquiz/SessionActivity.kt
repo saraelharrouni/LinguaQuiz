@@ -3,6 +3,7 @@ package com.example.linguaquiz
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,8 @@ class SessionActivity : AppCompatActivity() {
         totalQuestions = vocabularyList.size // On posera autant de questions qu'il y a de mots
 
         val textDirectionInfo = findViewById<TextView>(R.id.textDirectionInfo)
+        val textProgress = findViewById<TextView>(R.id.textProgress)
+        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val textWordToTranslate = findViewById<TextView>(R.id.textWordToTranslate)
         val editAnswer = findViewById<EditText>(R.id.editAnswer)
         val btnSubmitAnswer = findViewById<Button>(R.id.btnSubmitAnswer)
@@ -56,6 +59,13 @@ class SessionActivity : AppCompatActivity() {
 
                 // On remet bien les 3 essais pour le nouveau mot
                 remainingTries = 3
+
+                //  On met à jour la barre de progression !
+                val currentDisplayNumber = currentWordIndex + 1
+                textProgress.text = "Mot $currentDisplayNumber / $totalQuestions"
+                progressBar.max = totalQuestions
+                progressBar.progress = currentDisplayNumber
+
             } else {
                 textWordToTranslate.text = "Dictionnaire vide"
                 btnSubmitAnswer.isEnabled = false
