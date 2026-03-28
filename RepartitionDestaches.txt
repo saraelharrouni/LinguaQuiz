@@ -1,0 +1,46 @@
+
+PROJET ANDROID : LINGUAQUIZ
+
+
+AUTEURS DU PROJET :
+- Sara
+- Hadrien
+- Ethan
+- Mohamed
+
+
+RÉPARTITION DES TÂCHES :
+--------------------------------------------------
+Afin de mener à bien ce projet, nous nous sommes répartis le développement des différentes composantes de l'application :
+
+* Sara :
+  - Design UI/UX et intégration du Material Design (fichiers XML, couleurs, thèmes).
+  - Création et intégration de la barre de progression visuelle dans la session.
+  - Génération de l'icône personnalisée de l'application.
+
+* Hadrien :
+  - Logique principale du quiz (SessionActivity).
+  - Implémentation de l'algorithme de mélange des mots sans répétition (.shuffled()).
+  - Création du système de jeu avec 3 essais (vies) par mot.
+
+* Ethan :
+  - Gestion de la persistance des données (StorageManager avec SharedPreferences et Gson).
+  - Sauvegarde de l'historique des parties et affichage sur l'écran d'accueil.
+  - Gestion de la logique d'abandon de session en cours de partie.
+
+* Mohamed :
+  - Gestion du dictionnaire (DictionaryActivity, RecyclerView, adaptateur).
+  - Implémentation de l'ajout et de la suppression des mots.
+  - Intégration du moteur vocal (Text-To-Speech) pour la prononciation des mots.
+
+
+FONCTIONNALITÉS AJOUTÉES (AU-DELÀ DES EXIGENCES) :
+--------------------------------------------------
+Pour rendre notre application plus professionnelle et agréable pour l'utilisateur, nous avons ajouté les fonctionnalités supplémentaires suivantes :
+
+1. Système de "Vies" : L'utilisateur dispose de 3 essais pour trouver la bonne traduction avant que la réponse ne lui soit donnée, le forçant à réfléchir.
+2. Tirage sans remise : Le dictionnaire est mélangé en début de session pour garantir que tous les mots soient révisés une seule fois sans répétition frustrante.
+3. Abandon de session : Un bouton permet de quitter le quiz en cours de route. La partie est alors proprement enregistrée avec la mention "abandonnée" dans l'historique de l'accueil.
+4. Synthèse Vocale (Text-to-Speech) : Ajout d'un bouton "Haut-parleur" permettant d'écouter la prononciation exacte du mot à traduire avec le bon accent (Anglais ou Français).
+5. Suivi de progression : Ajout d'une barre de progression dynamique (ProgressBar) et d'un compteur ("Mot X / Y") pour indiquer l'avancement dans le quiz.
+6. Design Professionnel : Transition vers le Material Design avec une palette de couleurs personnalisée, des boutons arrondis, et une véritable icône d'application.
